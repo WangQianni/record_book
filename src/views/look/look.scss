@@ -1,0 +1,75 @@
+.look {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .statusBar {
+        background: rgba($color: #333, $alpha: .3);
+    }
+    .content {
+        width: 80%;
+        margin: 1rem auto 0;
+        position: relative;
+        .title {
+            width: 100%;
+            display: block;
+            border: none;
+            background: transparent;
+            font: bold .32rem '宋体';
+            color: #333;
+            text-align: center;
+            height: 0.6rem;
+            line-height: 0.6rem;
+        }
+        .btnPlay {
+            width: .4rem;
+            height: 0.4rem;
+            background: transparent;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        video {
+            position: absolute;
+        }
+        .inner {
+            width: 100%;
+            height: 8rem;
+            display: block;
+            border: none;
+            background: transparent;
+            color: #333;
+            text-indent: .6rem;
+            line-height: .6rem;
+        }
+        .styleInner {
+            color: #000;
+            height: 3rem;
+        }
+        .styleTitle {
+            color: #000;
+        }
+        .btns {
+            display: block;
+            width: 60%;
+            height: 0.6rem;
+            background: #F53766;
+            border-radius: .15rem;
+            border: none;
+            margin: .5rem auto 0;
+            text-align: center;
+            line-height: .6rem;
+            color: #fff;
+        }
+        p {
+            width: 80%;
+            margin: .5rem auto 0;
+            color: #999;
+            text-align: right;
+        }
+    }
+}

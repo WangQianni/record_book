@@ -1,0 +1,27 @@
+{
+    "apps": [
+        {
+            "name": "record_book",
+            "script": "main.js",
+            "env": {
+                "COMMON_VARIABLE": "true"
+            },
+            "env_production": "production"
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "wangzv",
+            "host": ["118.24.201.25"],
+            "port": "5200",
+            "ref": "origin/master",
+            "repo": "git@github.com:WangQianni/record_book.git",
+            "path": "/www/record_book",
+            "post-deploy": "yarn && pm2 startOrRestart ecosystem.json --env production",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+}

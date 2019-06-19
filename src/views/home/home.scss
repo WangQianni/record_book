@@ -1,0 +1,112 @@
+.home {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: url('../../assets/images/contentBG.jpg') no-repeat left/100% 100%;
+    .boxList {
+        width: 80%;
+        padding: .1rem;
+        margin: 1rem auto 0;
+        // background: rgba($color: #333, $alpha: .3);
+        .dataList {
+            width: 100%;
+            height: 0.6rem;
+            border-bottom: 1px solid #000;
+            color: #000;
+            margin: .2rem 0;
+            position: relative;
+            .left, .right {
+                display: block;
+            }
+            .left {
+                width: 55%;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                float: left;
+            }
+            .right {
+                float: right;
+                margin-right: .5rem;
+            }
+            .delBg {
+                display: block;
+                width: 0.3rem;
+                height: 0.3rem;
+                line-height: 0.3rem;
+                text-align: center;
+                color: #000;
+                border: 1px solid #000;
+                border-radius: 100%;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    .model {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: rgba($color: #333, $alpha: .3);
+        .modelBox {
+            width: 60%;
+            height: 3rem;
+            background: #eee;
+            margin: 4rem auto;
+            border-radius: .2rem;
+            .modelInner {
+                width: 100%;
+                height: 2rem;
+                line-height: 2rem;
+                text-align: center;
+                border-bottom: .01rem solid #333;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                padding: 0 .5rem;
+            }
+            .modelBtn {
+                display: flex;
+                width: 100%;
+                height: 1rem;
+                .modeltrue, .modelfalse {
+                    width: 50%;
+                    text-align: center;
+                    line-height: 1rem;
+                }
+                .modeltrue {
+                    border-right: .01rem solid #333;
+                }
+            }
+        }
+    }
+    .openModel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($color: #eee, $alpha: .3);
+        z-index: 99999;
+    }
+}
+
+.mint-header {
+    color: #000;
+    background: #E6E0D4;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .8s
+}
+
+.fade-enter,
+.fade-leave-to{
+    opacity: 0
+}
+

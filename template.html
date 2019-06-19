@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function (win, doc) {
+            if (!win.addEventListener) return;
+            var html = document.documentElement;
+            function setFont() {
+                var cliWidth = html.clientWidth;
+                //750为设计稿的宽度大小
+                html.style.fontSize = 100 * (cliWidth / 750) + 'px';
+            }
+            win.addEventListener('resize', setFont, false)
+            doc.addEventListener('DOMContentLoaded', setFont, false)
+        })(window, document)
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
