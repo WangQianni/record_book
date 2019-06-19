@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "record_book",
-            "script": "main.js",
+            "script": "index.js",
             "env": {
                 "COMMON_VARIABLE": "true"
             },
@@ -17,7 +17,7 @@
             "ref": "origin/master",
             "repo": "git@github.com:WangQianni/record_book.git",
             "path": "/www/record_book",
-            "post-deploy": "yarn && pm2 startOrRestart ecosystem.json --env production",
+            "post-deploy": "yarn && npm run pub && pm2 startOrRestart ecosystem.json --env production",
             "ssh_options": "StrictHostKeyChecking=no",
             "env": {
                 "NODE_ENV": "production"
